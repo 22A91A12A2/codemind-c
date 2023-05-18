@@ -1,14 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int n,temp=0,rem;
-    scanf("%d",&n);
-    while(n>0)
+    int num,large=0,rem=0;
+    scanf("%d",&num);
+    while(num>0)
     {
-        rem=n%10;
-        if(temp<rem)
-        temp=rem;
-        n=n/10;
+        rem=num%10;
+        if(rem>large)
+        {
+            large=rem;
+        }
+        num=num/10;
     }
-    printf("%d",temp);
+    printf("%d
+",large);
+    return 0;
 }
